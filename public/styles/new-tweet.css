@@ -16,6 +16,7 @@
   font-family: "Bungee", Sans-Serif;
 }
 
-.new-tweet form .counter {
+.new-tweet form #counter {
   float: right;
+  font-family: "Bungee", Sans-Serif;
 }
