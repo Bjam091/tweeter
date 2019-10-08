@@ -1,0 +1,13 @@
+nav {
+  position: fixed;
+  /* height: 120px; not needed since padding is applied */
+  width: 100%;
+  z-index: 100;
+  background-color: #4056A1;
+  color: #FFF;
+  padding: 1.5em;
+}
+
+nav span {
+  font-family: "Bungee", Sans-Serif;
+}

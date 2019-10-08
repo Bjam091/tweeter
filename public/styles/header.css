@@ -1,0 +1,27 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #45a673;
+  background-image: url('../images/merely-cubed.png');
+}
+
+header .avatar {
+  position: relative;
+  text-align: center;
+  padding-top: 120px;
+}
+
+header .avatar img {
+  width: 200px;
+}
+
+header .user-name {
+  position: relative;
+  text-align: center;
+  margin-top: -35px;
+}
+
+header .user-name .bold{
+  /* font-family: Source Sans Pro; */
+  font-weight: 300;
+}

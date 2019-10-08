@@ -1,0 +1,21 @@
+.new-tweet form textarea {
+  resize: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 2px solid;
+  height: 45px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: 700;
+}
+
+.new-tweet form input {
+  background-color: #4056A1;
+  color: #FFF;
+  font-family: "Bungee", Sans-Serif;
+}
+
+.new-tweet form .counter {
+  float: right;
+}
