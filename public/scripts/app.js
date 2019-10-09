@@ -55,7 +55,7 @@ const renderTweets = function(tweets) {
 // loops through tweets
 // calls createTweetElement for each tweet
 // takes return value and appends it to the tweets container
-
+$('.bodyTweets').empty()  
 for(let tweet of tweets){
   let output = createTweetElement(tweet);
   $(`.bodyTweets`).prepend(output);
