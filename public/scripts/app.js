@@ -5,22 +5,6 @@
  */
 $(document).ready(function() {
 
-// function createTweetElement(tweetData){
-//   return `<article class=tweet>
-//   <header>
-//     <span id="test"><img src=${tweetData.user.avatars}>${tweetData.user.name}</span>
-//     <span class="userName">${tweetData.user.handle}</span>
-//   </header>
-// <div class="tweetBody">
-// ${tweetData.content.text}</div>
-//   <footer>
-//     <span>${tweetData.created_at}</span>
-//     <span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
-//   </footer>
-// </article>`
-// }
-
-// Fake data taken from initial-tweets.json
 const data = [
   {
     "user": {
@@ -58,8 +42,7 @@ for(let tweet of tweets){
 }
 
 const createTweetElement = function(tweet) {
-// let $tweet = $('<article>').addClass('tweet');
-const $tweets = ( 
+const $tweets = (
 `<article class=tweet>
   <header>
     <span id="test"><img src=${tweet.user.avatars}>${tweet.user.name}</span>
