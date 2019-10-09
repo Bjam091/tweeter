@@ -13,7 +13,7 @@ $form.on('submit', (event) => {
   console.log('Tweet submitting...');
   if($('.newTweetArea')[0].value.length > 140){
     alert("Your tweet is too big there!")
-  } else if ($('.newTweetArea')[0].value.length === 0 || $('.newTweetArea')[0].value === ""){
+  } else if ($('.newTweetArea')[0].value.length === 0 || $('.newTweetArea')[0].value === "" || $('.newTweetArea')[0].value === undefined){
     alert("Your tweet has no content")
   } else {
   $.post('/tweets', $form.serialize())
@@ -67,6 +67,13 @@ for(let tweet of tweets){
 }
 }
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+
 const createTweetElement = function(tweet) {
 const $tweets = (
 `<article class=tweet>
@@ -75,7 +82,7 @@ const $tweets = (
     <span class="userName">${tweet.user.handle}</span>
   </header>
 <div class="tweetBody">
-${tweet.content.text}</div>
+${escape(tweet.content.text)}</div>
   <footer>
     <span>${tweet.created_at}</span>
     <span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
@@ -94,7 +101,11 @@ renderTweets(data);
 
 
 
-
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 
 
