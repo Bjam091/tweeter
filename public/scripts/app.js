@@ -7,11 +7,12 @@ $(document).ready(function() {
 
   $("#navButton").on("click", function(){
     $(".new-tweet").slideToggle({
+      
     })
+    $(".newTweetArea").focus();
   })
 
-
- 
+  $('.new-tweet').hide();
 
 
 $(function(){  
@@ -80,6 +81,8 @@ const escape =  function(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
+
 
 
 const createTweetElement = function(tweet) {

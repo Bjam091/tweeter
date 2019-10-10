@@ -20,7 +20,21 @@ nav span {
   font-size: 20px;
   background-color: transparent;
   border: none;
-}
+  transition: all 0.5s;
+  animation: bounce 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+ }
+ @keyframes bounce {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+ }
+
+
 
 #navButton:hover{
   cursor: pointer
