@@ -47,7 +47,14 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+
+
       <section class="new-tweet">
+          
+        <div id="error140"><i class="fas fa-exclamation-triangle"></i> Your tweet has too many characters! <i class="fas fa-exclamation-triangle"></i></div>
+        <div id="error0"><i class="fas fa-exclamation-triangle"></i> Your tweet has no valid content! <i class="fas fa-exclamation-triangle"></i></div>
+
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="post">
           <textarea name="text" class="newTweetArea" placeholder="What are you humming about?"></textarea>

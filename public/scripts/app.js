@@ -20,14 +20,19 @@ const $form = $('form');
 $form.on('submit', (event) => {
   event.preventDefault();
   console.log('Tweet submitting...');
+  $('#error140').slideUp()
+  $('#error0').slideUp()
   if($('.newTweetArea')[0].value.length > 140){
-    alert("Your tweet is too big there!")
+    $('#error140').slideDown()
+    $(".newTweetArea").focus()
   } else if ($('.newTweetArea')[0].value.length === 0 || $('.newTweetArea')[0].value === "" || $('.newTweetArea')[0].value === undefined){
-    alert("Your tweet has no content")
+    $('#error0').slideDown()
+    $(".newTweetArea").focus()
   } else {
   $.post('/tweets', $form.serialize())
   .then(function(res){
     loadTweets();
+    $(".newTweetArea").focus().val("") 
   });
   }
 });

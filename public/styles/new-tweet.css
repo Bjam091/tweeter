@@ -24,3 +24,23 @@
 .new-tweet {
   margin-bottom: 60px;
 }
+
+ #error140 {
+  color: red;
+  width: 100%;
+  height: auto;
+  border: 2px solid red;
+  text-align: center;
+  display: none;
+  margin: 10px
+}
+
+#error0 {
+  color: red;
+  width: 100%;
+  height: auto;
+  border: 2px solid red;
+  text-align: center;
+  display: none;
+  margin: 10px
+}
