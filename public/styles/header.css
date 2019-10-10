@@ -25,3 +25,13 @@ header .user-name {
   margin-top: -35px;
   font-weight: 300
 }
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .siteHeader{
+  
+   width:100%;
+   padding: 0;
+   margin: 0
+  }
+}
