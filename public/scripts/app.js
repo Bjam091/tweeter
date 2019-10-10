@@ -95,6 +95,7 @@ const createTweetElement = function(tweet) {
   let newDate = Date.now() - tweet.created_at
   let finalDate = newDate/1000/60/60/24
   let totalDate = Math.round(finalDate)
+  
 const $tweets = (
 `<article class=tweet>
   <header>
