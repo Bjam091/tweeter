@@ -82,10 +82,19 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
+// const timeStamp = function(str) {
+// let newDate = Date.now() - tweet.created_at
+// let finalDate = newDate/1000/60/60/24
+// return
+// }
+
 
 
 
 const createTweetElement = function(tweet) {
+  let newDate = Date.now() - tweet.created_at
+  let finalDate = newDate/1000/60/60/24
+  let totalDate = Math.round(finalDate)
 const $tweets = (
 `<article class=tweet>
   <header>
@@ -95,7 +104,7 @@ const $tweets = (
 <div class="tweetBody">
 ${escape(tweet.content.text)}</div>
   <footer>
-    <span>${tweet.created_at}</span>
+    <span>${totalDate} days ago</span>
     <span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
   </footer>
 </article>`);
