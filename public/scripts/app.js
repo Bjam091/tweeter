@@ -46,28 +46,6 @@ const loadTweets = function(data) {
   };
 
 const data = [
-  // {
-  //   "user": {
-  //     "name": "Newton",
-  //     "avatars": "https://i.imgur.com/73hZDYK.png"
-  //     ,
-  //     "handle": "@SirIsaac"
-  //   },
-  //   "content": {
-  //     "text": "If I have seen further it is by standing on the shoulders of giants"
-  //   },
-  //   "created_at": 1461116232227
-  // },
-  // {
-  //   "user": {
-  //     "name": "Descartes",
-  //     "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //     "handle": "@rd" },
-  //   "content": {
-  //     "text": "Je pense , donc je suis"
-  //   },
-  //   "created_at": 1461113959088
-  // }
 ]
 
 const renderTweets = function(tweets) {
@@ -87,14 +65,6 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
-// const timeStamp = function(str) {
-// let newDate = Date.now() - tweet.created_at
-// let finalDate = newDate/1000/60/60/24
-// return
-// }
-
-
-
 
 const createTweetElement = function(tweet) {
   let newDate = Date.now() - tweet.created_at
@@ -111,7 +81,7 @@ const $tweets = (
 ${escape(tweet.content.text)}</div>
   <footer>
     <span>${totalDate} days ago</span>
-    <span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
+    <div class="emojis"><span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span></div>
   </footer>
 </article>`);
 

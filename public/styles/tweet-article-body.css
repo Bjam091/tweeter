@@ -60,6 +60,16 @@ article:hover .userName{
   color: gray
 }
 
+article .emojis{
+  display:none;
+}
+
+article:hover .emojis{
+  display: initial;
+  color: gray
+}
+
+
 img{
   padding:10px;
 }
