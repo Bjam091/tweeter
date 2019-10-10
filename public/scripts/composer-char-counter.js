@@ -1,3 +1,5 @@
+//verifies that the number of characters of the tweet are within their paramaters
+
 $(document).ready(function() {
   $('.newTweetArea').keyup('keyup' , function() {
     const text = $(this).val();

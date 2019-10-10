@@ -3,6 +3,10 @@
   width: 100%;
   background-color: #45a673;
   background-image: url('../images/merely-cubed.png');
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 300;
 }
 
 header .avatar {
@@ -19,9 +23,5 @@ header .user-name {
   position: relative;
   text-align: center;
   margin-top: -35px;
-}
-
-header .user-name .bold{
-  /* font-family: Source Sans Pro; */
-  font-weight: 300;
+  font-weight: 300
 }

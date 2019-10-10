@@ -32,3 +32,13 @@ main.container {
   margin-right: auto;
 
 }
+
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 150px;
+}
+
+.column {
+  width: 50%;
+}

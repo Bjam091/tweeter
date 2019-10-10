@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-
+//This hides/shows the new Tweet function upon click
   $("#navButton").on("click", function(){
     $(".new-tweet").slideToggle({
       
@@ -15,6 +15,7 @@ $(document).ready(function() {
   $('.new-tweet').hide();
 
 
+//takes the tweet, verifies that it passes all conditions, then POSTs it to /tweets  
 $(function(){  
 const $form = $('form');
 $form.on('submit', (event) => {
@@ -37,7 +38,7 @@ $form.on('submit', (event) => {
   }
 });
 });
-
+//loads tweets on the home page
 const loadTweets = function(data) {
     $.ajax('/tweets',  { method: 'GET' })
     .then(function (res){
@@ -47,25 +48,22 @@ const loadTweets = function(data) {
 
 const data = [
 ]
-
+//renders the tweets by looping through them and calling on createTweetElement
 const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
 $('.bodyTweets').empty()  
 for(let tweet of tweets){
   let output = createTweetElement(tweet);
   $(`.bodyTweets`).prepend(output);
 }
 }
-
+//prevents anyone from passing dangerous strings through the tweet function
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
-
+//returns the tweets in the desired format, also changes the date from milliseconds to days
 const createTweetElement = function(tweet) {
   let newDate = Date.now() - tweet.created_at
   let finalDate = newDate/1000/60/60/24
