@@ -5,6 +5,14 @@
  */
 $(document).ready(function() {
 
+  $("#navButton").on("click", function(){
+    $(".new-tweet").slideToggle({
+    })
+  })
+
+
+ 
+
 
 $(function(){  
 const $form = $('form');
@@ -92,20 +100,11 @@ ${escape(tweet.content.text)}</div>
 return $tweets;
 }
 
+loadTweets()
+
+
 renderTweets(data);
 });
-
-
-
-
-
-
-
-const escape =  function(str) {
-  let div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-}
 
 
 
