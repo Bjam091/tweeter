@@ -30,63 +30,41 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <span id="newTweetButton"><h2>Write a new tweet</h2>
-      <button id="navButton" class="navigator"><i class="navigator fas fa-angle-double-down"></i>
-      </button>
+      <span id="newTweetButton">
+        <h2>Write a new tweet</h2>
+        <button id="navButton" class="navigator"><i class="navigator fas fa-angle-double-down"></i></button>
       </span>
     </nav>
 
     <div class="inner-container">
       <div class="column">
         <div class="siteHeader">
-        <div class="avatar">
+          <div class="avatar">
             <img src="/images/profile-hex.png">
-        </div>
-        <div class="user-name">
+          </div>
+          <div class="user-name">
             <h2>Your <span style="font-weight: 300">Name</span></h2>
+          </div>
         </div>
       </div>
-  </div>
 
 
     <!-- Page-specific (main) content here -->
     <div class="column">
       <main class="container">
-      <section class="new-tweet">
-          
-        <div id="error140"><i class="fas fa-exclamation-triangle"></i> Your tweet has too many characters! <i class="fas fa-exclamation-triangle"></i></div>
-        <div id="error0"><i class="fas fa-exclamation-triangle"></i> Your tweet has no valid content! <i class="fas fa-exclamation-triangle"></i></div>
-
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="post">
-          <textarea name="text" class="newTweetArea" placeholder="What are you humming about?"></textarea>
-          <input class="tweetSubmit" type="submit" value="Tweet">
-          <span id="counter">140</span>
-        </form>
-      </section>
-    
-    
-
-
-      <section class="bodyTweets">
-        <!-- <article class=tweet>
-          <header>
-            <span id="test"><img src="https://i.imgur.com/73hZDYK.png">User's Name</span>
-            <span class="userName">@UserName</span>
-          </header>
-        <div class="tweetBody">
-           Y'all I'm a tweet, ain't that cool? I thought so. I'm the best tweet ever created, ever, and you wanna know why? I'm exactly 140 characters
-        </div>
-          <footer>
-            <span>10 days ago</span>
-            <span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
-          </footer>
-        </article> -->
-      </section>
-    </div>
-    </div>
-     
-    </main>
+        <section class="new-tweet">
+          <div id="error140"><i class="fas fa-exclamation-triangle"></i> Your tweet has too many characters! <i class="fas fa-exclamation-triangle"></i></div>
+          <div id="error0"><i class="fas fa-exclamation-triangle"></i> Your tweet has no valid content! <i class="fas fa-exclamation-triangle"></i></div>
+          <h2>Compose Tweet</h2>
+          <form action="/tweets" method="post">
+            <textarea name="text" class="newTweetArea" placeholder="What are you humming about?"></textarea>
+            <input class="tweetSubmit" type="submit" value="Tweet">
+            <span id="counter">140</span>
+          </form>
+        </section>
+        <section class="bodyTweets">
+        </section>
+      </main>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
