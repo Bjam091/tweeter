@@ -32,6 +32,7 @@ $(document).ready(function() {
           .then(function(res) {
             loadTweets();
             $(".newTweetArea").focus().val("");
+            $("#counter").text("140");
           });
       }
     });
